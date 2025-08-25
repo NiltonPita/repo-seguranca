@@ -10,15 +10,15 @@ jobs:
       issues: write
       pull-requests: write   
   steps:
-    - name: Adicionano Funcionalidade
-      run: echo "Teste de action"
-    - name: Action de testes
-      uses: actions/github-script@v6
-      with: 
-        script: |
-          github.rest.issues.createComment{{
-            issues_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: 'Adicionando um comentário no meu PR'
-            }}
+   - name: Adicionado Funcionalidade
+     run: echo "Teste de action"
+   - name: Action de teste
+     uses: actions/github-script@v6
+     with: 
+      script: |
+        github.rest.issues.createComment{{
+         issues_number: context.issue.number,
+         owner: context.repo.owner,
+         repo: context.repo.repo,
+         body: 'Adicionando um comentário no meu PR'
+      }}
